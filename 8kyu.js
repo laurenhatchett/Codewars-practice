@@ -1,12 +1,38 @@
 /*Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages. Your taks is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0. 
+
 Example: n=5, m=5: 25
          n=-5, m=-5: 0 */
 
+
+//My Solution
 function paperwork(n, m) {
   let totalPages = n*m
-  if (n<0 || m < 0){
+  if (n < 0 || m < 0){
     return 0
   } else {
     return totalPages
   }
 }
+
+//Best Solution
+function paperwork(n, m){
+  return n > 0 && m > 0 ? n * m : 0
+}
+
+//Another Solution
+function paperwork(n, m){
+  if (m < 0 || n < 0){
+    return 0;
+  }
+  return m * n
+}
+
+
+/* Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence.
+
+Example: ['hello', 'world', 'this', 'is', 'great'] -> 'hello world this is great' */
+
+smash = function (words) {
+  return words.join(" ")
+}
+
